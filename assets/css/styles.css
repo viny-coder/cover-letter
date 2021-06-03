@@ -388,7 +388,7 @@ body .full-width {
 }
 
 @media (max-width: 800px) {
-    .intro-content, .grid {
+    .intro-content, .grid, .grade {
         grid-template-columns: 1fr;
     }
 
