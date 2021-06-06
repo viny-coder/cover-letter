@@ -273,8 +273,8 @@ text-align: justify;
 
 .gallery-img {
     width: 100%;
-    max-width: 25rem;
-    max-height: 25rem;
+    max-width: 20rem;
+    max-height: 20rem;
     overflow: hidden;
 }
 
@@ -388,14 +388,19 @@ body .full-width {
 }
 
 @media (max-width: 800px) {
-    .intro-content, .grid, .grade {
+    .intro-content, .grid {
         grid-template-columns: 1fr;
+    }
+
+    .grade {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .gallery-img {
         width: 100%;
         max-width: 100%;
         max-height: 100%;
+        
     }
     
     .gallery-img img {
