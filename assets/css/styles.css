@@ -69,7 +69,9 @@ a {
 
 p {
     margin-bottom: 3rem;
+    
 }
+
 
 .main-bg {
     background-image: url('../img/main-bg.svg');
@@ -162,17 +164,21 @@ grid-template-columns: 1fr 1.5fr;/* Tamanhos da colunas esquerda e direita*/
 gap: var(--gap);
 min-height: 100vh;
 text-align: justify;
+
+
 }
 
 .intro-text-content, .intro-img {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
+    max-width: 100%;
 }
 
 .intro-img img {
     max-width: 100%;
     height: auto;
+    max-height: 100%;
 }
 
 /* edicao da segunda sessao About Me */
@@ -195,7 +201,7 @@ text-align: justify;
 .dots div {
     width: 5rem;
     height: 5rem;
-    background: var(--primary-color);;
+    background: var(--white-color);;
     border-radius: 50%;
     margin-left: 1.5rem;
     margin-top: 2rem;
@@ -388,15 +394,41 @@ body .full-width {
 }
 
 @media (max-width: 800px) {
+    html, body{
+        overflow-x: hidden !important; 
+    }
+    body {
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+    }
+   
+    .main-content{
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        
+    }
+
+    h2 {
+        font-size: 4rem;
+        
+    }
+
     .intro-content, .grid {
         grid-template-columns: 1fr;
+        grid-template-columns: minmax(100%);
+        max-height: 100%;
+        max-width: 100%;
+        
+        
     }
 
     .grade {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .gallery-img {
+    .gallery-img, .intro-img img {
         width: 100%;
         max-width: 100%;
         max-height: 100%;
@@ -449,15 +481,20 @@ body .full-width {
     /* × */
     .close-menu:checked~.menu {
         display: block;
+        
     }
 
     .close-menu:checked~.close-menu-label::after {
         display: block;
         content: '×';
+        background: var(--secondary-color);
     }
 
     .menu-spacing {
         display: none;
+    
     }
+
+    
 }
 
