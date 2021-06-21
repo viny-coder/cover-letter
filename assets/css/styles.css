@@ -72,6 +72,10 @@ p {
     
 }
 
+.link {
+    text-decoration: none;
+    color: #EEEEEE;
+}
 
 .main-bg {
     background-image: url('../img/main-bg.svg');
